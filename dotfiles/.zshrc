@@ -15,6 +15,15 @@ setopt inc_append_history
 # Reread history file every time history is needed
 setopt share_history
 
+# Reduce sequences of spaces to one space in history
+setopt hist_reduce_blanks
+
+# Save time and elapsed time of commands in history
+setopt extended_history
+
+# confirm execution of commands when using bang history
+setopt hist_verify
+
 # Enable command and variable substitutions in the prompt
 setopt prompt_subst
 
