@@ -70,6 +70,9 @@
 ;; Show current function name in mode line
 (setq which-function-mode t)
 
+;; Add final newline when saving
+(setq require-final-newline t)
+
 ;; Load magit, an interactive mode for manipulating Git repositories
 (require 'magit)
 
