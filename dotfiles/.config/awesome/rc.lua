@@ -42,7 +42,18 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "editor"
-editor_cmd = terminal .. " -e " .. editor
+
+function terminal_cmd(command)
+   if command then
+      return terminal .. " -e '" .. command .. "'"
+   else
+      return terminal
+   end
+end
+
+function editor_cmd(filename)
+   return terminal_cmd(editor .. " " .. filename)
+end
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -81,8 +92,8 @@ end
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
+   { "manual", terminal_cmd('man awesome') },
+   { "edit config", editor_cmd(awesome.conffile) },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
