@@ -79,3 +79,6 @@ if [[ -f ~/.aliases ]]; then
     source ~/.aliases
 fi
 
+if [[ -f ~/.zshrc_local ]]; then
+    source ~/.zshrc-local
+fi
