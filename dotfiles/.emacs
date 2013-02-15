@@ -4,6 +4,10 @@
 (if (file-accessible-directory-p (expand-file-name "~/.elisp/"))
     (add-to-list 'load-path (expand-file-name "~/.elisp/")))
 
+;; If there are local customizations, load them
+(if (file-readable-p (expand-file-name "~/.emacs-local"))
+    (load-file (expand-file-name "~/.emacs-local")))
+
 ;; Enable color themes
 (require 'color-theme)
 (color-theme-initialize)
