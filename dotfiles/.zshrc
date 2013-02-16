@@ -60,7 +60,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #Remove '/' from WORDCHARS, so we can use C-w to erase path components
 WORDCHARS="${WORDCHARS:s#/#}"
 
-PROMPT='[%T] %m:%~ %B%#%b '
+#Setup associative arrays with colors for use in prompt definition
+autoload -Uz colors
+colors
+
+PROMPT="%{${fg[yellow]}%}[%T] %{${fg[blue]}%}%m%{${fg[default]}%}:%{${fg[green]}%}%~ %B%#%b "
 
 # Add VCS repository info to right prompt
 # This assumes the code from https://github.com/goedson/zsh-git-prompt.git
