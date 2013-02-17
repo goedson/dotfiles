@@ -1,7 +1,15 @@
 #-*- mode:shell-script -*-
-#$EDITOR defined as "emacsclient -c" in .zshrc
+#$EDITOR defined as "emacsclient -c" in .zshenv
 alias emacs=$EDITOR
 
 # put some color in the terminals
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+#some safety guards
+alias rm='rm -i'
+alias mv='mv -i'
+
+if [[ -r ~/.aliases-local ]]; then
+    source ~/aliases-local
+fi
