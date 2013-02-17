@@ -3,8 +3,11 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
-setopt autocd
+setopt auto_cd
 setopt extended_glob
+
+# Allow redirecting I/O to multiple files
+setopt multios
 
 # Ignore duplicates in history
 setopt hist_ignore_all_dups
@@ -21,7 +24,7 @@ setopt hist_reduce_blanks
 # Save time and elapsed time of commands in history
 setopt extended_history
 
-# confirm execution of commands when using bang history
+# Confirm execution of commands when using bang history
 setopt hist_verify
 
 # Enable command and variable substitutions in the prompt
@@ -73,7 +76,7 @@ source ~/.zsh/zsh-vcs-prompt/zshrc.sh
 RPROMPT='$(vcs_super_info)'
 
 # Define all aliases in ~/.aliases
-if [[ -f ~/.aliases ]]; then
+if [[ -r ~/.aliases ]]; then
     source ~/.aliases
 fi
 
