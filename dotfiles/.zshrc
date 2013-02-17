@@ -72,17 +72,16 @@ PROMPT="%{${fg[yellow]}%}[%T] %{${fg[blue]}%}%m%{${fg[default]}%}:%{${fg[green]}
 source ~/.zsh/zsh-vcs-prompt/zshrc.sh
 RPROMPT='$(vcs_super_info)'
 
-# Make emacsclient spawn a new emacs daemon if one doesn't exist yet
-export ALTERNATE_EDITOR=''
-
-# Make emacsclient the default editor
-export EDITOR='emacsclient -c'
-
 # Define all aliases in ~/.aliases
 if [[ -f ~/.aliases ]]; then
     source ~/.aliases
 fi
 
-if [[ -f ~/.zshrc_local ]]; then
+#Define environment variables in ~/.zshenv
+if [[ -r ~/.zshenv ]]; then
+fi
+
+# Run any local configurations if they exist
+if [[ -r ~/.zshrc-local ]]; then
     source ~/.zshrc-local
 fi
