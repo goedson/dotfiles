@@ -11,5 +11,5 @@ alias rm='rm -i'
 alias mv='mv -i'
 
 if [[ -r ~/.aliases-local ]]; then
-    source ~/aliases-local
+    source ~/.aliases-local
 fi
