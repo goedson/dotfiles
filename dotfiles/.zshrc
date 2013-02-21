@@ -82,6 +82,7 @@ fi
 
 #Define environment variables in ~/.zshenv
 if [[ -r ~/.zshenv ]]; then
+    source ~/.zshenv
 fi
 
 # Run any local configurations if they exist
