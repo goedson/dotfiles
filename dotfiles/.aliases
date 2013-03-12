@@ -9,6 +9,7 @@ alias grep='grep --color=auto'
 #some safety guards
 alias rm='rm -i'
 alias mv='mv -i'
+alias cp='cp -i'
 
 if [[ -r ~/.aliases-local ]]; then
     source ~/.aliases-local
