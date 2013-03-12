@@ -51,7 +51,7 @@
 (setq linum-format "%d ")
 
 ;; Kill line contents and newline with one C-k
-(setq kill-whole-newline t)
+(setq kill-whole-line t)
 
 ;; Highlight trailing whitespaces ...
 (setq show-trailing-whitespace t)
