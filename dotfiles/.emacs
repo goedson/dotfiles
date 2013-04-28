@@ -101,3 +101,6 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(hl-line ((t (:inverse-video t)))))
+
+;; Enable narrow-to-region
+(put 'narrow-to-region 'disabled nil)
