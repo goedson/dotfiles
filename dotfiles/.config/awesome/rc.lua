@@ -12,6 +12,9 @@ require("naughty")
 -- Load battery widget
 require("obvious.battery")
 
+-- Load sound volume widget
+require("obvious.volume_alsa")
+
 -- Load Debian menu entries
 require("debian.menu")
 
@@ -116,6 +119,8 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 mybattery = obvious.battery()
+myvolume = obvious.volume_alsa()
+
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
@@ -196,6 +201,7 @@ for s = 1, screen.count() do
         mylayoutbox[s],
 	mytextclock,
         mybattery,
+	myvolume,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
