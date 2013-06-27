@@ -1,3 +1,3 @@
-#!/usr/bin/zsh
-setxkbmap -option ctrl:swapcaps&
+#!/bin/sh
+~/scripts/swap_space_and_left_control_keys.sh
 awesome
