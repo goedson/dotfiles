@@ -7,3 +7,5 @@ export EDITOR='emacsclient -c'
 if [[ -r ~/.zshenv-local ]]; then
     source ~/.zshenv-local
 fi
+
+path=(~/bin ~/scripts $path)
