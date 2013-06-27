@@ -11,4 +11,4 @@ sleep 1
 xmodmap -e "add control = Control_L Control_R"
 
 
- xcape -e 'Control_L=space'
+~/bin/xcape -e 'Control_L=space'
