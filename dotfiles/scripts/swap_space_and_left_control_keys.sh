@@ -9,6 +9,6 @@ xmodmap -e "$newspace"
 xmodmap -e "$newctrl"
 sleep 1
 xmodmap -e "add control = Control_L Control_R"
-
+xmodmap -e "remove control = space"
 
 ~/bin/xcape -e 'Control_L=space'
