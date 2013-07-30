@@ -5,8 +5,13 @@
     (add-to-list 'load-path (expand-file-name "~/.elisp/")))
 
 ;; If there are local customizations, load them
-(if (file-readable-p (expand-file-name "~/.emacs-local"))
-    (load-file (expand-file-name "~/.emacs-local")))
+(if (file-readable-p (expand-file-name "~/.emacs-local.el"))
+    (load-file (expand-file-name "~/.emacs-local.el")))
+
+;; Save customizations done through customization buffers to a separate file
+(setq  custom-file  "~/.emacs-custom.el")
+(load  custom-file)
+
 
 ;; Enable color themes
 (require 'color-theme)
@@ -41,13 +46,13 @@
 (setq next-line-add-newlines nil)
 
 ;; highlight current line
-(global-hl-line-mode)
+(global-hl-line-mode t)
 
 ;; Highlight matching parenthesis
 (show-paren-mode t)
 
 ;; Show line numbers on the left edge
-(global-linum-mode)
+(global-linum-mode t)
 (setq linum-format "%d ")
 
 ;; Kill line contents and newline with one C-k
@@ -89,18 +94,6 @@
 
 ;; Do not show startup screen
 (setq inhibit-startup-screen t)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(hl-line ((t (:inverse-video t)))))
 
 ;; Enable narrow-to-region
 (put 'narrow-to-region 'disabled nil)
