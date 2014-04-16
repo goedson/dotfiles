@@ -82,6 +82,12 @@
 ;; Add final newline when saving
 (setq require-final-newline t)
 
+;; Enable git version control mode
+(require 'vc-git)
+
+;; Automatically revert buffers after checkout
+(global-auto-revert-mode)
+
 ;; Load magit, an interactive mode for manipulating Git repositories
 (require 'magit)
 
