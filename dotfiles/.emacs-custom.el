@@ -6,3 +6,5 @@
   ;; If there is more than one, they won't work right.
  '(hl-line ((t (:inverse-video t)))))
 
+(custom-set-variables
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))

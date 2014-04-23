@@ -12,6 +12,8 @@
 (setq  custom-file  "~/.emacs-custom.el")
 (load  custom-file)
 
+;; Better buffer name disambiguation
+(require 'uniquify)
 
 ;; Enable color themes
 (require 'color-theme)
