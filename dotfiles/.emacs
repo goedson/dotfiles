@@ -8,6 +8,7 @@
 (if (file-readable-p (expand-file-name "~/.emacs-local.el"))
     (load-file (expand-file-name "~/.emacs-local.el")))
 
+
 ;; Save customizations done through customization buffers to a separate file
 (setq  custom-file  "~/.emacs-custom.el")
 (load  custom-file)
@@ -36,6 +37,9 @@
 ;; Show line and column numbers in the mode line
 (setq line-number-mode t)
 (setq column-number-mode t)
+
+;; Show size of buffer in the mode line
+(setq size-indication-mode t)
 
 ;; Display time and date in mode line
 (setq display-time-day-and-date t)
@@ -105,3 +109,8 @@
 
 ;; Enable narrow-to-region
 (put 'narrow-to-region 'disabled nil)
+
+;; Move through logical lines
+(setq line-move-visual nil)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;   ;;;;;
