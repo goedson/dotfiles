@@ -17,9 +17,13 @@
 (require 'uniquify)
 
 ;; Enable color themes
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-clarity)
+;(require 'color-theme)
+;(color-theme-initialize)
+;(color-theme-clarity)
+
+;; Loads custom theme. Requires emacs 24
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'monokai)
 
 ;; Enable ibuffer
 (require 'ibuffer)
