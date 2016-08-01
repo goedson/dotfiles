@@ -120,6 +120,7 @@
 
 
 ;; Support for moder C++
+;; Support for modern C++
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
 
