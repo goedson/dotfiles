@@ -122,3 +122,9 @@
 ;; Support for moder C++
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
+
+;; C-mode formatting style
+(setq c-default-style
+      ’((java-mode . "java")
+	(awk-mode . "awk")
+	(other . "gnu")))
