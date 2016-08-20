@@ -117,9 +117,6 @@
 (global-set-key [M-down]    #'next-error)
 (global-set-key [M-up]      (lambda () (interactive) (next-error -1)))
 
-
-
-;; Support for moder C++
 ;; Support for modern C++
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
