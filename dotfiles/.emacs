@@ -126,3 +126,6 @@
       '((java-mode . "java")
 	(awk-mode . "awk")
 	(other . "gnu")))
+
+;; Repeat C-SPC after C-u to pop mark repeatedly.
+(setq set-mark-command-repeat-pop t)
