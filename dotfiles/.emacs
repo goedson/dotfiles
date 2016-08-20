@@ -123,6 +123,6 @@
 
 ;; C-mode formatting style
 (setq c-default-style
-      ’((java-mode . "java")
+      '((java-mode . "java")
 	(awk-mode . "awk")
 	(other . "gnu")))
