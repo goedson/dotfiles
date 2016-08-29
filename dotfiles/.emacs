@@ -129,3 +129,6 @@
 
 ;; Repeat C-SPC after C-u to pop mark repeatedly.
 (setq set-mark-command-repeat-pop t)
+(setq scroll-conservatively 100)
+
+(setq scroll-error-top-bottom t)
