@@ -129,6 +129,10 @@
 
 ;; Repeat C-SPC after C-u to pop mark repeatedly.
 (setq set-mark-command-repeat-pop t)
+
+;; Display battery status in modeline
+(display-battery-mode 1)
+
 (setq scroll-conservatively 100)
 
 (setq scroll-error-top-bottom t)
