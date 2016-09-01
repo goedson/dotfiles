@@ -132,3 +132,10 @@
 (setq scroll-conservatively 100)
 
 (setq scroll-error-top-bottom t)
+
+;; CEDET config
+(require 'cedet)
+(require 'semantic)
+(require 'srecode)
+(global-ede-mode 1)                      ; Enable the Project management system
+(global-srecode-minor-mode 1)            ; Enable template insertion menu
