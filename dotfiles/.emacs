@@ -127,7 +127,7 @@
   (c-toggle-electric-state 1)
   (c-toggle-auto-newline 1)
   (c-toggle-hungry-state 1)
-  (c-toggle-syntatic-indentation 1))
+  (c-toggle-syntactic-indentation 1))
 
 ;; Activate some special key bindings for cc-mode
 (defun my-cc-mode-key-bindings ()
