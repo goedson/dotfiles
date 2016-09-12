@@ -121,6 +121,22 @@
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
 
+;; Activate c-mode's minor modes
+(defun my-cc-minor-modes ()
+  (subword-mode 1)
+  (c-toggle-electric-state 1)
+  (c-toggle-auto-newline 1)
+  (c-toggle-hungry-state 1)
+  (c-toggle-syntatic-indentation 1))
+
+;; Activate some special key bindings for cc-mode
+(defun my-cc-mode-key-bindings ()
+  (local-set-key (kbd "RET") 'c-context-line-break)
+  (local-set-key (kbd "C-o") 'c-context-open-line))
+
+(add-hook 'c-mode-common-hook 'my-cc-minor-modes)
+(add-hook 'c-mode-common-hook 'my-cc-mode-key-bindings)
+
 ;; C-mode formatting style
 (setq c-default-style
       '((java-mode . "java")
