@@ -13,6 +13,9 @@
 (setq  custom-file  "~/.emacs-custom.el")
 (load  custom-file)
 
+;; Enable auto fill in text mode
+(toggle-text-mode-auto-fill)
+
 ;; Better buffer name disambiguation
 (require 'uniquify)
 
