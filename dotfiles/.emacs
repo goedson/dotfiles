@@ -131,13 +131,12 @@
   (c-toggle-auto-newline 1)
   (c-toggle-hungry-state 1)
   (c-toggle-syntactic-indentation 1))
+(add-hook 'c-mode-common-hook 'my-cc-minor-modes)
 
-;; Activate some special key bindings for cc-mode
+;; Activate context sensitive line breaking in cc-mode
 (defun my-cc-mode-key-bindings ()
   (local-set-key (kbd "RET") 'c-context-line-break)
   (local-set-key (kbd "C-o") 'c-context-open-line))
-
-(add-hook 'c-mode-common-hook 'my-cc-minor-modes)
 (add-hook 'c-mode-common-hook 'my-cc-mode-key-bindings)
 
 ;; Enable auto fill in cc-mode
