@@ -140,6 +140,9 @@
 (add-hook 'c-mode-common-hook 'my-cc-minor-modes)
 (add-hook 'c-mode-common-hook 'my-cc-mode-key-bindings)
 
+;; Enable auto fill in cc-mode
+(add-hook 'c-mode-common-hook 'auto-fill-mode)
+
 ;; C-mode formatting style
 (setq c-default-style
       '((java-mode . "java")
