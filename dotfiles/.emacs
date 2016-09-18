@@ -164,3 +164,9 @@
 (require 'srecode)
 (global-ede-mode 1)                      ; Enable the Project management system
 (global-srecode-minor-mode 1)            ; Enable template insertion menu
+
+;; Global bindings for org mode
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
