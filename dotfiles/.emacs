@@ -101,7 +101,7 @@
 
 ;; Load magit's stgit support
 ;; You will need magit 1.1.0 or later for this
-(require 'magit-stgit)
+(require 'magit-stgit nil t)
 
 ;; Bind magit status to C-x v b
 (global-set-key [(control x) (v) (b)] 'magit-status)
