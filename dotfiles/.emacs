@@ -173,3 +173,7 @@
 
 ;; Show stack trace on error
 (setq debug-on-error t)
+
+;; Set search scroll behaviour
+(setq scroll-margin 5)
+(setq isearch-allow-scroll 1)
