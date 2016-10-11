@@ -115,7 +115,6 @@
 ;; Move through logical lines
 (setq line-move-visual nil)
 
-
 ;; Navigation in compilation result buffers
 (global-set-key [M-down]    #'next-error)
 (global-set-key [M-up]      (lambda () (interactive) (next-error -1)))
@@ -177,3 +176,6 @@
 ;; Set search scroll behaviour
 (setq scroll-margin 5)
 (setq isearch-allow-scroll 1)
+
+;; Insert paired parenthesis
+(electric-pair-mode 1)
