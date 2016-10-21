@@ -179,3 +179,7 @@
 
 ;; Insert paired parenthesis
 (electric-pair-mode 1)
+
+;; Enable IDO
+(require 'ido)
+(ido-mode 1)
