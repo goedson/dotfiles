@@ -187,3 +187,6 @@
 (setq ido-ignore-extensions t)
 (setq iod-use-filename-at-point  'guess)
 (add-hook  'ido-make-buffer-list-hook  'ido-summary-buffers-to-end)
+
+;; Support the use of dead-keys to enter accented Latin characters.
+(require  'iso-transl)
