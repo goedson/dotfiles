@@ -182,4 +182,8 @@
 
 ;; Enable IDO
 (require 'ido)
-(ido-mode 1)
+(ido-mode t)
+(ido-everywhere)
+(setq ido-ignore-extensions t)
+(setq iod-use-filename-at-point  'guess)
+(add-hook  'ido-make-buffer-list-hook  'ido-summary-buffers-to-end)
