@@ -99,6 +99,9 @@
 ;; Load magit, an interactive mode for manipulating Git repositories
 (require 'magit)
 
+;; Stop magit from showing warning about magit-auto-revert-mode
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 ;; Load magit's stgit support
 ;; You will need magit 1.1.0 or later for this
 (require 'magit-stgit nil t)
