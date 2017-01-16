@@ -174,7 +174,7 @@
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 
 ;; Show stack trace on error
-(setq debug-on-error t)
+;;(setq debug-on-error t)
 
 ;; Set search scroll behaviour
 (setq scroll-margin 5)
