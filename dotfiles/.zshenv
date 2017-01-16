@@ -9,3 +9,6 @@ if [[ -r ~/.zshenv-local ]]; then
 fi
 
 path=(~/bin ~/scripts $path)
+
+export DEBEMAIL="goedson@debian.org"
+export DEBFULLNAME="Goedson Teixeira Paixao"
